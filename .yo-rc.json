@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "itkbootstrap",
+    "style": "css",
+    "postcss": false
+  }
+}
