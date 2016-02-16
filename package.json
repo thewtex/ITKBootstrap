@@ -20,7 +20,11 @@
     "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
   "repository": "",
-  "keywords": ["itk", "imaging", "medical"],
+  "keywords": [
+    "itk",
+    "imaging",
+    "medical"
+  ],
   "author": "Insight Software Consortium",
   "devDependencies": {
     "babel-core": "^6.0.0",
