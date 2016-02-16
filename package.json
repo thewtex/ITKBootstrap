@@ -6,8 +6,7 @@
   "main": "",
   "scripts": {
     "clean": "rimraf dist/*",
-    "copybootstrap": "node copy-example-assets.js",
-    "copy": "npm run copybootstrap && copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
+    "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "dist": "npm run copy & webpack --env=dist",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
@@ -21,7 +20,11 @@
     "test:watch": "karma start --autoWatch=true --singleRun=false"
   },
   "repository": "",
-  "keywords": ["itk", "imaging", "medical"],
+  "keywords": [
+    "itk",
+    "imaging",
+    "medical"
+  ],
   "author": "Insight Software Consortium",
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -61,8 +64,6 @@
     "webpack-dev-server": "^1.12.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.4",
-    "bootswatch": "^3.3.6",
     "core-js": "^2.0.0",
     "normalize.css": "^3.0.3",
     "react": "^0.14.0",
