@@ -1,3 +1,4 @@
+'use strict';
 require('normalize.css');
 
 import React from 'react';
@@ -16,7 +17,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="app">
-      <Grid fluid="false">
+      <Grid>
         <Row>
           <Col xs={12} md={6}>
             <Image src={inputImage} responsive />
