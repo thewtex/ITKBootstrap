@@ -11,9 +11,11 @@ import {
   Row
 } from 'react-bootstrap';
 
+import InputImage from './InputImage';
+
 let inputImage = require('../images/BrainProtonDensitySlice.png')
 
-class AppComponent extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <div className="app">
@@ -24,7 +26,11 @@ class AppComponent extends React.Component {
             <h3>Input</h3>
           </Col>
           <Col xs={12} md={6}>
-            <code>&lt;{'Col xs={6} md={4}'} /&gt;</code>
+            <InputImage
+              src='../images/BrainProtonDensitySlice.png'
+              fileName='BrainProtonDensitySlice.png'
+              onUpload={ function() { } }
+                />
           </Col>
         </Row>
         <Row>
@@ -41,7 +47,7 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
+Main.defaultProps = {
 };
 
-export default AppComponent;
+export default Main;
