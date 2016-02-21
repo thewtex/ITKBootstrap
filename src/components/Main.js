@@ -1,3 +1,4 @@
+'use strict';
 require('normalize.css');
 
 import React from 'react';
@@ -10,20 +11,26 @@ import {
   Row
 } from 'react-bootstrap';
 
+import InputImage from './InputImage';
+
 let inputImage = require('../images/BrainProtonDensitySlice.png')
 
-class AppComponent extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <div className="app">
-      <Grid fluid="false">
+      <Grid>
         <Row>
           <Col xs={12} md={6}>
             <Image src={inputImage} responsive />
             <h3>Input</h3>
           </Col>
           <Col xs={12} md={6}>
-            <code>&lt;{'Col xs={6} md={4}'} /&gt;</code>
+            <InputImage
+              src='../images/BrainProtonDensitySlice.png'
+              fileName='BrainProtonDensitySlice.png'
+              onUpload={ function() { } }
+                />
           </Col>
         </Row>
         <Row>
@@ -40,7 +47,7 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
+Main.defaultProps = {
 };
 
-export default AppComponent;
+export default Main;
