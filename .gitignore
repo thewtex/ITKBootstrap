@@ -30,6 +30,3 @@ node_modules
 bower_components/
 
 dist
-
-src/styles/bootstrap
-src/styles/bootswatch
