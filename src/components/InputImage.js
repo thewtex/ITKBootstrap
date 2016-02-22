@@ -5,9 +5,8 @@ import { Image } from 'react-bootstrap';
 
 require('styles/FileInputButton.css');
 
-
 const InputImage = React.createClass({
-  handleChange: (event) => {
+  handleChange: function(event) {
     this.props.onUpload(event.target.files[0]);
   },
 
@@ -19,10 +18,16 @@ const InputImage = React.createClass({
         <div className="center-block"><Image src={this.props.src} responsive /></div>
       </div>
       <div className="panel-footer">
-        {this.props.fileName}
-        <span className="btn btn-default btn-file">
-          Upload <input type="file" name="files[]" accept=".png" onChange={ this.handleChange } />
-        </span>
+        <form className="form-horizontal">
+        <div className="form-group">
+          <label for="inputImageUpload" className="col-sm-2 control-label">{this.props.fileName}</label>
+          <div className="col-sm-10">
+          <span className="btn btn-primary btn-file pull-right">
+            Upload <input id="inputImageUpload" type="file" name="files[]" accept=".png" onChange={ this.handleChange } />
+          </span>
+          </div>
+        </div>
+        </form>
       </div>
     </div>
     );

@@ -29,7 +29,7 @@ class Main extends React.Component {
             <InputImage
               src='../images/BrainProtonDensitySlice.png'
               fileName='BrainProtonDensitySlice.png'
-              onUpload={ function() { } }
+              onUpload={ function(file) { console.log('uploaded file', file.name); }}
                 />
           </Col>
         </Row>
