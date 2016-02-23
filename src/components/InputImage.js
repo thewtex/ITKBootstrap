@@ -20,7 +20,7 @@ const InputImage = React.createClass({
       <div className="panel-footer">
         <form className="form-horizontal">
         <div className="form-group">
-          <label for="inputImageUpload" className="col-sm-2 control-label">{this.props.fileName}</label>
+          <label className="col-sm-2 control-label">{this.props.fileName}</label>
           <div className="col-sm-10">
           <span className="btn btn-primary btn-file pull-right">
             Upload <input id="inputImageUpload" type="file" name="files[]" accept=".png" onChange={ this.handleChange } />
