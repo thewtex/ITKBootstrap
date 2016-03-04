@@ -6,6 +6,7 @@ import { InputImage } from '../components';
 
 const mapStateToProps = (state) => {
   return {
+    image: state.image
   };
 };
 
